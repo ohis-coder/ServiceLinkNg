@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceLink</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ServiceLink</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'service_list' %}">Home</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Search Form -->
+        <section id="search">
+            <h2>Find a Service</h2>
+            <form method="get" action="{% url 'service_list' %}" class="search-form">
+                <input type="text" name="q" placeholder="Search for services..." value="{{ request.GET.q }}">
+                <input type="submit" value="Search">
+            </form>
+        </section>
+
+        <!-- Display Services -->
+        <section id="services">
+            <h2>Available Services</h2>
+            <ul>
+                {% if services %}
+                    {% for service in services %}
+                        <li class="service-item">
+                            <h3>{{ service.name }}</h3>
+                            <p>{{ service.description }}</p>
+                            <p><strong>Location:</strong> {{ service.location }}</p>
+                            <p><strong>Contact:</strong> {{ service.contact }}</p>
+                            <p><strong>Rating:</strong> {{ service.rating }}</p>
+                            <p><strong>Service Type:</strong> {{ service.service_type }}</p>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    <li>No services found.</li>
+                {% endif %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ServiceLink. All rights reserved.</p>
+    </footer>
+</body>
+</html>
