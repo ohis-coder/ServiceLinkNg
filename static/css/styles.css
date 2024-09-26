@@ -1,0 +1,85 @@
+/* static/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea; /* Light grey background */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #2c80d4; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Increased padding */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Increased margin for spacing */
+}
+
+nav ul li a {
+    color: #89c2de; /* Bright blue color for links */
+    text-decoration: none;
+    font-weight: bold; /* Bold text for links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.search-form {
+    margin: 20px 0; /* Added margin */
+    text-align: center; /* Centered search form */
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 60%; /* Reduced width for better appearance */
+    border: 2px solid #1f5082; /* Dark blue border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.search-form input[type="submit"] {
+    padding: 10px 15px;
+    background: #00aaff; /* Bright blue background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+}
+
+.search-form input[type="submit"]:hover {
+    background: #0077cc; /* Darker blue on hover */
+}
+
+.service-item {
+    border: 1px solid #ddd;
+    margin-bottom: 15px; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    background: #ffffff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+footer {
+    background: #83add6; /* Dark blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 15px 0; /* Increased padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
